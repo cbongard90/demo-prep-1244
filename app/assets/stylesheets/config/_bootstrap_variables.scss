@@ -10,3 +10,16 @@ $border-radius-sm: 2px;
 
 $headings-font-family: $headers-font;
 $font-family-sans-serif: $body-font;
+
+/* Theme-colors-map - ... */
+
+$theme-colors: (
+  "primary": $primary,
+  "success": $success
+);
+
+$custom-colors: (
+  "custom-color": $custom-color
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
