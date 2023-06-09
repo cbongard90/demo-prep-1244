@@ -2,9 +2,14 @@
   <%= f.input :name,
               wrapper_html: { class: "mb-4" },
               label_html: { class: "form-label text-secondary fw-bold" } %>
-  <%= f.input :description,
-              wrapper_html: { class: "mb-4" },
-              label_html: { class: "form-label text-secondary fw-bold" } %>
+  <div data-controller="character-counter">
+    <%= f.input :description,
+                wrapper_html: { class: "mb-1" },
+                input_html: { data: { character_counter_target: "input" } },
+                label_html: { class: "form-label text-secondary fw-bold" } %>
+
+    <p>Description is currently <strong data-character-counter-target="counter"></strong> characters long.</p>
+  </div>
   <%= f.input :photo,
               as: :file,
               wrapper_html: { class: "mb-4" },

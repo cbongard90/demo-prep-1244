@@ -1,4 +1,10 @@
-<div class="card mb-4">
+<div class="card mb-4"
+  data-controller="popover"
+  data-bs-toggle="popover"
+  data-bs-trigger="hover"
+  data-bs-placement="right"
+  title="Description"
+  data-bs-content="<%= restaurant.description %>">
   <div class="card-body">
     <h5 class="card-title">
       <%= restaurant.name %>
